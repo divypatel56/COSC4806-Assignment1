@@ -21,8 +21,8 @@ session_start();
       $_SESSION["failed attempts"] + 1;
     }
 
-    echo "This is unsuccessful attempt number: " .
-    $_SESSION["failed attempts"];
+    header( "Location: ./login.php" );
+   
     
   }
   

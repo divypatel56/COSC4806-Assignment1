@@ -1,6 +1,12 @@
 <?php
 session_start();
+//if it is a failed attempt, then show the error message with the number of failed attempts.
+if(isset($_SESSION["failed attempts"])){
+  
+  echo "<p style='color:red'>This is unsuccessful attempt number: " .$_SESSION["failed attempts"];
+}
 ?>
+  
 <!DOCTYPE html>
 <html>
   <head>
