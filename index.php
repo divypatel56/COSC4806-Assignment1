@@ -5,8 +5,6 @@ session_start();
 if(!isset($_SESSION['authenticated'])){
   header("Location: ./login.php");
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -20,4 +18,6 @@ if(!isset($_SESSION['authenticated'])){
     
     <p>Welcome, <?= $_SESSION [ "username" ] ?> </p>
   </body>
+
+  <footer> <a href="./logout.php">Click here to Logout</a> </footer>
 </html>

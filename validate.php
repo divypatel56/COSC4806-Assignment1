@@ -13,15 +13,19 @@ session_start();
     header("Location: ./index.php");
   }
   else{
-    if(!isset($_SESSION["failled attempts"])){
+    if(!isset($_SESSION["failed attempts"])){
       $_SESSION["failed attempts"] = 1;
     }
     else{
-      $_SESSION["failed attempts"]++;
+      $_SESSION["failed attempts"] = 
+      $_SESSION["failed attempts"] + 1;
     }
-    echo "This is unsuccessful attempt number: ".
+
+    echo "This is unsuccessful attempt number: " .
     $_SESSION["failed attempts"];
+    
   }
+  
 
   
 ?>
