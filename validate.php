@@ -9,6 +9,7 @@ session_start();
   $password = $_REQUEST['password'];
 
   if ($username==$valid_usernamr && $password==$valid_password){
+    $_SESSION['authenticated'] = 1;
     header("Location: ./index.php");
   }
   else{
