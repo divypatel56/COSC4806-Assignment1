@@ -15,14 +15,11 @@ if(!isset($_SESSION['authenticated'])){
   
   <body>
     <h1>Assignment-1</h1>
-    
-    <p>Welcome, <?= $_SESSION [ "username" ] 
-      //display the current date (formatted in a readable way)
-      . ". Today is: " . date("Y-m-d") . "."
-      
-      ?> </p>
-    
+    <!--if user able to logged in, display their username   
+     with the current date-->
+    <p>Welcome, <?= $_SESSION [ "username" ].". Today is: ". 
+    date("Y-m-d")."."?> </p>
   </body>
-
+  
   <footer> <a href="./logout.php">Click here to Logout</a> </footer>
 </html>
